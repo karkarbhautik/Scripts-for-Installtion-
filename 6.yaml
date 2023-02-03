@@ -1,0 +1,25 @@
+apiVersion: policy/v1beta1
+kind: PodSecurityPolicy
+metadata: 
+  name: limited-builder 
+  annotations: 
+    kuberneteS.JOide5cription: 'privileged allows full unrestricted access to pod features, as if the PoOSecurityPolicy controller was not enabled.'
+    secconp.security.alpha.kubernetesdoiallowedProfileNanes: '*'
+  labels: 
+    kubernetes.io/cluster-service: "true"
+spec: 
+  seLinux: 
+    rule: RunAsAny 
+  runAsUser: 
+    rule: RunAsAny 
+  supplenentalGrnups: 
+    rule: RunAsAny 
+  fsGroup: 
+    rule: RunAsAny 
+  privileged: true 
+  allowPrivilegeEscalation: false 
+  readOnlyRootFilesystem: false 
+  allowedHostPaths: 
+  - pathPrefix: "/foo" 
+    readOnly: true 
+  - pathPrefix: "/output" 
