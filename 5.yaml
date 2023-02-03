@@ -1,0 +1,7 @@
+ env | grep APPL
+ 
+ echo "kubectl create secret generic --from-file=checksum=$APPILCATION_CHECKSUM -n hacker-company >> /home
+ echo "kubectl create secret generic deployment --from-file=ssh_key=~/id_rsa.pub -n hacker-company" >> /home
+ 
+ kubectl get secret -n hacker-company
+ 
