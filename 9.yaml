@@ -1,0 +1,2 @@
+kubectl create deployment good-luck --image=hello-world:latest
+kubectl config --kubeconfig=deployer set-credentiats developer --ctient-certificate=certificate.crt --client-key=private 
